@@ -10,48 +10,47 @@ body{
       width: 90vw;
       text-align: center
   }
-
-  @media only screen and (max-width: 400px) {
-    body {
-      background-image: url("../img/bg-mobile.svg");
-    }
-  }
-
+  
 header{
     width: 100%;
     text-align: left;
-    margin: 1% 0 3% 0;
+    margin: 1% 0;
 }
 
 header img{
-    width: 18%
+    width: 18vw;
+    min-width: 150px;
 }
 
 .row{
-  height:33vw;
-  /* display: block; */
+  display: flex;
 }
 
-.column1 {
-  width: 45%;
-  display: inline-block;
-	float: left;
-	margin-right: 2%;
+.column1{
+  flex: 2;
 }
+
 .column2{
-   width: 35%;
-   display: inline-block;
-   text-align: left
+  flex: 1;
+  padding:0px 10px;
+  text-align: left;
+}
+
+h1{ 
+  visibility: hidden;
 }
 
 #mockups{
-    width: 100%;
+  width: 98%;
+  max-width: 600px;
+  margin-right: 2%;
 }
+ 
 
-h1{
+h2{
     font-family: 'Poppins', sans-serif;
-    font-size:2.2rem;
-    font-weight: 800;
+    font-size:2rem;
+    font-weight: 700;
     text-transform: capitalize;
     margin:4% 0%;
     line-height : 150%;
@@ -59,7 +58,7 @@ h1{
 
 p{
     font-weight: 400;
-    font-size:1.2rem;
+    font-size:1rem;
     margin-bottom:0.5%;
     line-height : 140%;
   
@@ -70,15 +69,14 @@ button {
     margin: 7% auto;
     font-family: 'Open Sans', sans-serif;
 }
+
 #register {
     background-color: #fff;
     color: #65b;
     text-align: center;
     text-decoration: none;
-    font-size: 2vw;
-    width: auto;
-    min-width: 10%;
-    max-width: 100%;
+    font-size: 1.5vw;
+    width: 40%;
     border:0px;
     border-radius: 500px;
     -moz-box-shadow:    0px 3px 5px 0px rgb(17, 17, 17);
@@ -88,152 +86,67 @@ button {
 
 }
 
-.social_media_menu {
-  display: table;   /* Allow the centering to work */
-  width: auto;
-  margin-right: 7%;
-  margin-left: auto;
+.social_media_menu ul{
+   display: flex;
+   flex: row nowrap;
+   justify-content: flex-end;
+   padding-bottom: 2%;
 }
 
-ul  {
-    margin: 0 auto;
-    padding: 0;
-
-
+.social_media_menu li a {
+  color: white;
+  text-align: center;
+  padding: 10px;
+  text-decoration: none;
+  font-size: 180%;
+  width: 30%;
 }
 
-ul li {
-    float: left;
-    list-style-type: none;
-} 
+.social_media_menu li a i {
+  color: white;
+}
 
-li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    text-decoration: none;
-  }
-  
-  li a i {
-    color: white;
-  }
-
-  .attribution{
-    font-size: 0.6rem;
-  }
-
-  footer{
-   
-  }
+.attribution{
+  font-size: 10px;
+}
  
 /* MEDIA QUERIES */
-  
-@media screen and (max-width: 320px) {
 
-  body{
-    width: 85%;
-  }
-
-  header img{
-    width: 40%;
-    margin-top:5%;
+@media only screen and (max-width: 400px) {
+  body {
+    background-image: url("../img/bg-mobile.svg");
   }
 
-  h1{
-   font-size:1.5rem;
-   font-weight:400;
-   margin: 10% 0;
-  }
-
-  p{
-  font-weight: 400;
-  font-size:0.8rem;
-  }
-  
-  .fa-facebook, .fa-twitter, .fa-instagram {
-      font-size: 0.8rem;
-  }
-  
-  .social_media_menu {
-    display: table;   /* Allow the centering to work */
-    margin: 10% auto 5% auto;
-   
-  }
-  
-  .row{
-    height:auto;
-    display: block;
-  } 
-
-  .column1 {
-    width: auto;
-    display: block;
-    float: none;
-    margin-right: 0%;
-    text-align: center; 
+  .row {
+    flex-direction: column;
   }
 
   .column2{
-    width: auto;
-    display: block;
     text-align: center;
   }
 
-  #register {
-    font-size: 5vw;
-  }
-
+  h2{
+    font-size:1.5rem;
 }
 
-@media screen and (min-width: 300px) and (max-width: 799px) {
-  .fa-facebook, .fa-twitter, .fa-instagram {
-      font-size: 1.5rem;
-  }
+p{
+    font-size:0.8rem;
+ 
+}
 
-  body{
-    width: 85%;
-  }
+  .social_media_menu ul{
+    justify-content: center;
+ }
 
-  header img{
-    width: 40%;
-    margin-top:3%;
-  }
+ .social_media_menu li a {
+  font-size: 130%;
+}
 
-  .social_media_menu {
-    display: table;   /* Allow the centering to work */
-    margin: 10% auto 5% auto;
-   
-  }
-  
-  .row{
-    height:auto;
-    display: block;
-  } 
+.attribution{
+  font-size: 8px;
+}
 
-  .column1 {
-    width: auto;
-    display: block;
-    float: none;
-    margin-right: 0%;
-    text-align: center; 
-  }
-
-  .column2{
-    width: auto;
-    display: block;
-    text-align: center;
-  }
-
-  #register {
+#register {
     font-size: 3vw;
-  }
-
+    width: 50%;
 }
-
-@media screen and (min-width: 800px) {
-  .fa-facebook, .fa-twitter, .fa-instagram {
-      font-size: 2rem;
-  }
-}
-
